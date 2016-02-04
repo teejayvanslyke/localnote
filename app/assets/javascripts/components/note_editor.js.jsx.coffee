@@ -1,6 +1,6 @@
 @NoteEditor = React.createClass
   render: ->
-    `<textarea ref="text" onKeyUp={this.persistNote} defaultValue={this.props.note.text}></textarea>`
+    `<form><textarea id="note_text" ref="text" onInput={this.persistNote} defaultValue={this.props.note.text}></textarea></form>`
 
   persistNote: ->
     _.throttle((=>
